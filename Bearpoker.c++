@@ -24,12 +24,8 @@
 
 //include "Bearpoker.h
 
-#define ACCURACY 0.000000000001
-
 using namespace std;
-//using BNUM = __int128_t;
 using BNUM = unsigned long long;
-//using BNUM = mpz_t;
 	
 // -------------
 // gcd
@@ -61,10 +57,8 @@ T lcm(T a, T b) {
 void bearpoker_solve (istream& r, ostream& w) {
     int  n;						// n = number of players
     BNUM a, b;					// a is the lcm of processed bets, b is the next bet
-    BNUM a1, b1, t;				// tmp var to do lcm
-    BNUM p, q, g, x;			// p = latest lcm, q = quotient, x = tmp variable	
-    float z;		
-	float log3 = log(3);
+    BNUM b1, t;					// tmp var to do lcm
+    BNUM q, g, x;				// g = latest gcd, q = quotient, x = tmp variable	
 	
 	r >> n;
 	r >> a;									// get first bet
